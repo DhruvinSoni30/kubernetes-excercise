@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-pod
+  labels:
+    top: pop
+spec:
+  containers:
+  - name: busybox-container
+    image: nginx
+
