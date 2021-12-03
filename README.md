@@ -29,3 +29,23 @@ The above command will schedule a pod on the node which has label of disk=ssd
     kubectl apply -f multi-container.yaml
 
 The above command will create a pod with 2 conatiners with nginx & busybox image
+
+### 6. Identify which node has the taint applied to it.
+   
+    kubectl describe node node01 | grep -i taint
+
+The above command will identify whether the node has taint applied to it or not
+
+### 7. Identify the node/pod has the greater memory consumption
+
+    kubectl top pod pode_name 
+    kubectl top node node_name
+
+The above command will identify the node/pod which has the highest memory/CPU consumption
+
+### 8. Create a daemonsets
+
+    kubectl apply -f daemon-sets.yaml
+
+The above command will create deamonset and 1 copy of pod will run on alll the nodes
+    
