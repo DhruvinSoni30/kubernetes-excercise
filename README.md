@@ -47,7 +47,7 @@ The above command will identify the node/pod which has the highest memory/CPU co
 
     kubectl apply -f daemon-sets.yaml
 
-The above command will create deamonset and 1 copy of pod will run on alll the nodes
+The above command will create deamonset and 1 copy of pod will run on all the nodes
  
 ### 9. Create PV, PVC and attach PVC to a Pod.
 
@@ -56,3 +56,12 @@ The above command will create deamonset and 1 copy of pod will run on alll the n
     kubectl apply -f pv-pod.yaml
     
 The above command will create a PV, PVC and will attach PVC to a pod
+
+### 10. Add a sidecar container busybox to a already created pod, mount a volume on it. Set shell command on that busy    box container.
+    
+    kubectl apply -f side.yaml
+
+The above command will attach a new container to already created pod and also mount the volume
+
+
+  
