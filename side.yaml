@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: side-car-pod
+spec:
+  containers:
+  - name: ngnix-container
+    image: nginx
+  - name: busybox-container
+    image: busybox
+    command: 
+    - sleep
+    - "4800"
+    volumeMounts:
+    - name: logs
+      mountPath: /tmp
+  volumes:
+  - name: logs
+    hostPath:
+       path: /home/dhsoni
+       type: Directory
