@@ -63,5 +63,9 @@ The above command will create a PV, PVC and will attach PVC to a pod
 
 The above command will attach a new container to already created pod and also mount the volume
 
+### 11. Find number of nodes in ready state, exclude the NoSchedule nodes. Write that number on a file.
+    
+    kubectl get nodes <To identify which node is in not ready state>
+    kubectl describe node node01 | grep -i taint <To check whether the node has taint applied on it or not>
 
   
