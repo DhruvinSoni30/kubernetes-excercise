@@ -48,4 +48,11 @@ The above command will identify the node/pod which has the highest memory/CPU co
     kubectl apply -f daemon-sets.yaml
 
 The above command will create deamonset and 1 copy of pod will run on alll the nodes
+ 
+### 9. Create PV, PVC and attach PVC to a Pod.
+
+    kubectl apply -f persistent-volume.yaml
+    kubectl apply -f persistent-volume-claim.yaml
+    kubectl apply -f pv-pod.yaml
     
+The above command will create a PV, PVC and will attach PVC to a pod
