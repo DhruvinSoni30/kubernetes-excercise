@@ -68,4 +68,23 @@ The above command will attach a new container to already created pod and also mo
     kubectl get nodes <To identify which node is in not ready state>
     kubectl describe node node01 | grep -i taint <To check whether the node has taint applied on it or not>
 
-  
+The above command will find the number of nodes in Ready state which has no taint NoSchedule applied to it
+
+### 12. Scale the deployment you just made down to 2 replicas.
+ 
+    kubectl scale deployment nginx-deploy --replicas=2
+
+### 13. Label the worker node of your cluster with rack=qa.
+
+    kubectl label node node01 rack=qa
+
+### 14. Upgrade the image in use by the web-dep deployment to nginx:1.9.1
+   
+    kubectl set image deployment/web-app nginx=nginx:1.9.1
+
+### 15. Roll the image in use by the web-dkubectl rollout history deployment/web-dep
+    
+    kubectl rollout history deployment/web-dep
+    kubectl rollout undo deployment/web-dep
+    
+    
